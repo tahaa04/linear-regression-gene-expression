@@ -111,7 +111,7 @@ sklearn_predictions.to_csv(
 x_line = np.linspace(x_train.min(), x_train.max(), 100)
 y_line = model.predict(x_line.reshape(-1, 1))
 
-plt.figure(figsize=(7, 5))
+plt.figure(figsize=(5.25, 3.75))
 
 plt.scatter(x_train, y_train, label="Training data")
 plt.plot(x_line, y_line, label="Scikit-learn regression line")
@@ -130,7 +130,7 @@ plt.savefig(
 plt.show()
 
 #ACTUAL VS PREDICTED PLOT
-plt.figure(figsize=(6, 6))
+plt.figure(figsize=(4, 4))
 
 plt.scatter(y_test, y_test_pred)
 

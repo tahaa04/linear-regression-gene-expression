@@ -126,7 +126,7 @@ plt.show()
 x_line = np.linspace(x_train.min(), x_train.max(), 100)
 y_line = predict(x_line, w, b)
 
-plt.figure(figsize=(7, 5))
+plt.figure(figsize=(5.25, 3.75))
 
 plt.scatter(x_train, y_train, label="Training data")
 plt.plot(x_line, y_line, label="Manual regression line")
@@ -189,7 +189,7 @@ manual_predictions.to_csv(
 )
 
 #ACTUAL VS PREDICTED PLOT
-plt.figure(figsize=(6, 6))
+plt.figure(figsize=(4.5, 4.5))
 
 plt.scatter(y_test, y_test_pred)
 
@@ -213,7 +213,7 @@ plt.show()
 #RESIDUAL PLOT
 residuals = y_test - y_test_pred
 
-plt.figure(figsize=(7, 5))
+plt.figure(figsize=(5.25, 3.75))
 
 plt.scatter(y_test_pred, residuals)
 plt.axhline(0)
