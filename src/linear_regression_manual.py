@@ -1,12 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-import os
 
-#CREATE OUTPUT FOLDERS
-os.makedirs("outputs/figures", exist_ok=True)
-os.makedirs("outputs/metrics", exist_ok=True)
-os.makedirs("outputs/predictions", exist_ok=True)
 
 #IMPORT TRAIN AND TEST DATA
 train_data = "data/processed_data/train_data.tsv"
@@ -111,7 +106,7 @@ print("Final bias:", b)
 print("Final training cost:", cost_history[-1])
 
 #PLOT COST FUNCTION
-plt.figure(figsize=(7, 5))
+plt.figure(figsize=(5.25, 3.75))
 
 plt.plot(cost_history)
 
