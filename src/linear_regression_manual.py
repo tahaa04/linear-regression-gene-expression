@@ -138,7 +138,7 @@ plt.legend()
 
 plt.savefig(
     "outputs/figures/manual_regression_line.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 
@@ -204,7 +204,7 @@ plt.title("Actual vs Predicted - Manual Model")
 
 plt.savefig(
     "outputs/figures/manual_actual_vs_predicted.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 
@@ -224,7 +224,7 @@ plt.title("Residual Plot - Manual Model")
 
 plt.savefig(
     "outputs/figures/manual_residual_plot.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 

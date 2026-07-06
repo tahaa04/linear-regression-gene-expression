@@ -123,7 +123,7 @@ plt.legend()
 
 plt.savefig(
     "outputs/figures/sklearn_regression_line.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 
@@ -145,7 +145,7 @@ plt.title("Actual vs Predicted - Scikit-learn Model")
 
 plt.savefig(
     "outputs/figures/sklearn_actual_vs_predicted.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 
