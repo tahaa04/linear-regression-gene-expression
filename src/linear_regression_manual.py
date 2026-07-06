@@ -116,7 +116,7 @@ plt.title("Cost Reduction During Gradient Descent")
 
 plt.savefig(
     "outputs/figures/manual_cost_reduction.png",
-    dpi=300,
+    dpi=150,
     bbox_inches="tight"
 )
 
