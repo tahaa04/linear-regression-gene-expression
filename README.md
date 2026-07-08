@@ -63,3 +63,45 @@ Plotting cost reduction over training iterations
 Evaluating the model using train/test split 
 Comparing the from-scratch implementation with scikit-learn’s LinearRegression
 
+## Project Structure
+
+```
+data/
+  raw_data/            Raw TCGA/Xena download (methylation + expression, all probes)
+  processed_data/      Cleaned single-probe dataset, and the train/test split
+notebooks/
+  01_exploratory_data_analysis.ipynb   Scatter plot / EDA on the cleaned data
+src/
+  data_wrangling.py                 Cleans the raw file -> processed_data/mgmt_cg12981137_lr_data.tsv
+  train_test_split.py               Splits the cleaned data -> train_data.tsv / test_data.tsv (80/20)
+  linear_regression_manual.py       From-scratch gradient descent model, evaluation, and plots
+  scikit_learn_linear_regression.py scikit-learn model, evaluation, plots, and model comparison
+outputs/
+  figures/     Regression lines, cost curve, actual-vs-predicted, residual plots (.png)
+  metrics/     MSE/RMSE/MAE/R2 for each model, plus a combined model_comparison.csv
+  predictions/ Per-sample test set predictions and residuals for each model
+```
+
+## How to Run
+
+Install dependencies, then run the scripts in order from the project root (each one reads the previous one's output):
+
+```
+pip install -r requirements.txt
+
+python src/data_wrangling.py
+python src/train_test_split.py
+python src/linear_regression_manual.py
+python src/scikit_learn_linear_regression.py
+```
+
+Figures pop up via `plt.show()` as each script runs, and are also saved to `outputs/figures/`.
+
+Optional EDA notebook: `jupyter notebook notebooks/01_exploratory_data_analysis.ipynb`
+
+## Viewing Results
+
+- Regression lines and diagnostic plots: `outputs/figures/`
+- Numeric metrics (MSE, RMSE, MAE, R2) for each model: `outputs/metrics/manual_metrics.csv`, `outputs/metrics/sklearn_metrics.csv`, and the side-by-side `outputs/metrics/model_comparison.csv`
+- Per-sample predictions and residuals on the held-out test set: `outputs/predictions/`
+
